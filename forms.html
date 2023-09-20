@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <h1>Φορμα Αποστολής δεδομένων</h1>
+    <form action="/sendData" method="get">
+        
+        <label for="FisName"> Name*</label>
+        <input type="text" id="FisName" name="FirstName" minlength="3" maxlength="20" placeholder="Your name" required> <br>
+
+        <label for="LasName"> Last Name*</label>
+        <input type="text" id="LasName" name="LastName" minlength="3" max="20" placeholder="Your last name" required> <br>
+        <label for="email">Email*</label>
+        <input type="email" name="emailaddress" id="email" placeholder="Enter your email here:"> <br>
+        
+
+        <label for="pass"> Password*: </label>
+        <input type="password" name="Password" id="pass" placeholder="Password" required><br>
+
+
+        <label for="complains"> Send us your complains</label> <br>
+        
+        <textarea name="Complains" id="complains" cols="50" rows="2" placeholder="PLEASE TELL US WHAT WENT WRONG!" minlength="10" maxlength="50"></textarea> <br>
+
+        <input type="submit" value="SEND">
+        <input type="reset" value="Clean"> <br>
+        <strong style="color: red;"><i> Fields with * must be filled out!</i></strong>
+
+
+
+
+
+    </form>
+    
+</body>
+</html>

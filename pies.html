@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalogos</title>
+</head>
+<header>
+    <h2> <a href="/index.html"></a>Οι πίτες του παππού</h2>
+    <p>Παρε μου μια πιτα</p>
+    <nav>
+        <ul>
+            <li><a href="/store.html"> Καταστημα</a></li>
+            <li><a href="/pies.html"> Οι πιτες μας</a></li>
+            <li><a href="/contact.html">Επικοινωνία</a></li>
+        </ul>
+    </nav>
+</header>
+<body>
+    <h1>Καταλογοσ με πιτες</h1>
+    <p>Παρέχουμε καθημερινα φρεσκές πιτες σε ασυναγωστιες τιμες. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quo laborum earum autem quam mollitia inventore excepturi, illum modi eaque nihil dolor eos exercitationem, corporis veniam! Aut praesentium neque est! Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam ad ipsam, odit quas sint repellendus neque cum necessitatibus? Quisquam amet saepe laborum repudiandae perspiciatis natus eligendi vel quod fugiat optio.
+    Possimus aliquam atque perferendis quisquam magnam ad quos. Ipsum, enim, magnam, temporibus quas laudantium possimus aperiam harum cumque pariatur eos consectetur ipsa ducimus neque inventore porro delectus doloremque perferendis esse?
+    Placeat ipsum impedit, ut quidem blanditiis deleniti beatae vitae, hic, exercitationem est quasi? Doloribus amet animi aspernatur rerum vero inventore? Nobis sunt provident temporibus ut quas optio cumque blanditiis earum?</p>
+    <H2>Oi pites mas</H2>
+    
+     <table>
+        <tr>
+            <td> <img src="pictures\spanakopita.jpg" alt=""></td> <td>Σπανακοπιτα 4 &euro;</td>
+        </tr>
+        <tr>
+            <td> <img src="pictures\manitaropita.jpg" alt=""></td> <td>Μανιταροπιτα 5,5 &euro;</td>
+        </tr>
+        <tr>
+            <td> <img src="pictures\prasopita.jpg" alt=""></td> <td>Πρασοπιτα 3,5 &euro;</td>
+        </tr>
+        <tr>
+            <td> <img src="pictures\boureki.jpg" alt=""></td> <td>Μπουρεκι 4,5 &euro;</td>
+        </tr>
+
+        
+
+
+
+
+     </table>
+        
+    <form action="/rata.html" method="post">
+        <fieldset>
+            <legend>Πληροφορίες Παράδοσης</legend>
+            <label for="Name">Ονοματεπώνυμο</label>
+            <input type="text" id="Name" name="Name" min="5" maxlength="30" required> <span>(*)</span> <br>
+            <label for="Address">Διεύθυνση (Οδός-Αριθμός)</label>
+            <input type="text" id="Address" name="Address" min="5" maxlength="30" pattern="^(?=\S*\s)(?=[^a-zA-Z]*[a-zA-Z])(?=\D*\d)[a-zA-Z\d\s',.#/-]*$" required>  <span>(*)</span> <br>
+            
+            <label for="Region">Περιοχή</label>
+            <select name="Region" id="Region">
+                <option value="Neraida" selected>Νεραιδα</option>
+                <option value="Neapoli">Νεαπολη</option>
+                <option value="Averof">Αβέρωφ</option>
+                <option value="Kentro">Κεντρο</option>
+            </select> <br>
+            <label for="mail">Email:</label>
+            <input type="email" id="mail" name="mail">
+            <label for="Tel">Τηλέφωνο:</label>
+            <input type="tel" name="Tel" id="Tel" pattern="[69][0-9]{9}" required> <span>(*)</span> <br>
+            <label for="Info"> Ειδικές Πληροφορίες για τη παράδοση:</label> <br>
+            <textarea name="Info" id="Info" cols="40" rows="9" placeholder="Γραψτές μας αν έχετε κάποια ειδική οδηγία για τη παράδοση" minlength="10" maxlength="500"></textarea>
+            <p style="color: red;">Τα πεδία με (*) είναι υποχρεωτικά</p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Παραγγελία</legend>
+            <ul>
+                <li><label for="Spanakopites"> Σπανακοπιτές</label>
+                <input type="number" id="Spanakopites" name="AmountSpanako" value="0" min="0" max="100"></li>
+                
+                <li><label for="Manitaropites">Μανιταρόπιτες:</label>
+                <input type="number" id="Manitaropites" name="AmountManitaro" value="0" min="0" max="100"></li>
+                
+                <li><label for="Tyropites">Τυρόπιτες</label>
+                    <input type="number" id="Tyropites" name="AmountTyropi" value="0" min="0" max="100"></li>
+
+                <li><label for="Burekia">Μπουρέκια</label>
+                        <input type="number" id="Burekia" name="AmountBurek" min="0" max="100"></li>
+            </ul>
+
+            <input type="checkbox" name="offer1" id="offerapprove">
+            <label for="offerapprove"> Ενσώματωση προσφοράς στι 10 η 1 δώρο.</label>
+        </fieldset>
+        
+        <fieldset>
+            <legend> Τρόπος πληρώμης</legend>
+                <input type="radio" value="Visa" name="payment" id="visa">
+                <label for="visa"> Visa</label>
+                <input type="radio" value="MasterCard" name="payment" id="MasterCard">
+                <label for="MasterCard"> MasterCard</label>
+                <input type="radio" value="Cash" name="payment" id="Cash">
+                <label for="Cash"> Cash</label>
+        </fieldset>
+        
+        <input type="submit" value="Αποστολή">
+        <input type="reset" value="Καθαρισμός">
+
+    </form>
+
+
+    
+</body>
+</html>
